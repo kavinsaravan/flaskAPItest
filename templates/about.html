@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}About - Flask Todo App{% endblock %}
+{% block header %}About This App{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>About Flask Todo App</h2>
+    <p>This is a simple todo application built with Flask, demonstrating:</p>
+    <ul style="margin: 1rem 0; padding-left: 2rem;">
+        <li>Flask routing and view functions</li>
+        <li>HTML template rendering with Jinja2</li>
+        <li>Form handling (POST requests)</li>
+        <li>URL parameters and dynamic routes</li>
+        <li>Flash messaging for user feedback</li>
+        <li>JSON API endpoints</li>
+        <li>Responsive CSS styling</li>
+    </ul>
+
+    <h3>Features</h3>
+    <ul style="margin: 1rem 0; padding-left: 2rem;">
+        <li>Add new tasks</li>
+        <li>Mark tasks as complete/incomplete</li>
+        <li>Delete tasks</li>
+        <li>View task creation timestamps</li>
+        <li>JSON API for programmatic access</li>
+    </ul>
+
+    <h3>API Usage</h3>
+    <p>You can access the todos programmatically:</p>
+    <code style="background: #f8f9fa; padding: 0.5rem; border-radius: 3px; display: block; margin: 1rem 0;">
+        GET /api/todos - Returns all todos as JSON
+    </code>
+
+    <a href="{{ url_for('index') }}" class="btn">Back to Tasks</a>
+</div>
+{% endblock %}
