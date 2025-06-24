@@ -93,7 +93,7 @@ def create_templates():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Flask Todo App{% endblock %}</title>
+    <title>{% block title %}Flask Todo App Hello{% endblock %}</title>
     <style>
         * {
             margin: 0;
@@ -378,6 +378,7 @@ def create_templates():
             <select id="category" name="category" required>
                 <option value="">Select a category...</option>
                 <option value="Work">Work</option>
+                <option value="Home">Home</option>
                 <option value="Other">Other</option>
             </select>
         </div>
@@ -477,10 +478,10 @@ def create_templates():
 
 if __name__ == '__main__':
     # Create templates directory if it doesn't exist
-    os.makedirs('templates', exist_ok=True)
-
+   # os.makedirs('templates', exist_ok=True)
     # Create the HTML templates
-    create_templates()
-
+    #create_templates()
     # Run the app
-    app.run(debug=True, host='0.0.0.0', port=5002)
+    #app.run(debug=True, host='0.0.0.0', port=5002)
+    port = int(os.environ.get("PORT", 5002))
+    app.run(host='0.0.0.0', port=port)
